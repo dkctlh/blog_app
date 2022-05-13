@@ -8,7 +8,7 @@ void snackBar(
   String msg,
 ) {
   var snack = SnackBar(
-    content: Text(msg.toString()),
+    content: SizedBox(height: 25, child: Center(child: Text(msg.toString()))),
     duration: const Duration(seconds: 3),
     backgroundColor: AppColors.borderColor,
   );
