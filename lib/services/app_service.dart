@@ -94,11 +94,10 @@ class AppService extends IAppService {
         Uri.parse("http://test020.internative.net/Blog/GetCategories"),
         headers: {"accept": "*/*", "Authorization": "Bearer $token"});
     if (response.statusCode >= 200 && response.statusCode <= 299) {
-      snackBar(jsonDecode(response.body)["Message"]);
       return CategoriesModel.fromJson(jsonDecode(response.body));
+    } else {
+      return null;
     }
-    snackBar(jsonDecode(response.body)["Message"]);
-    return null;
   }
 
   @override
@@ -118,11 +117,10 @@ class AppService extends IAppService {
     );
 
     if (response.statusCode >= 200 && response.statusCode <= 299) {
-      snackBar(jsonDecode(response.body)["Message"]);
       return BlogsModel.fromJson(jsonDecode(response.body));
+    } else {
+      return null;
     }
-    snackBar(jsonDecode(response.body)["Message"]);
-    return null;
   }
 
   @override
@@ -142,10 +140,9 @@ class AppService extends IAppService {
     );
 
     if (response.statusCode >= 200 && response.statusCode <= 299) {
-      snackBar(jsonDecode(response.body)["Message"]);
       return true;
     }
-    snackBar(jsonDecode(response.body)["Message"]);
+
     return jsonDecode(response.body)["Message"];
   }
 
