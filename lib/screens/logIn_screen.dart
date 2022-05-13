@@ -26,77 +26,80 @@ class LoginScreen extends StatelessWidget {
         title: const Center(child: Text("Login")),
       ),
       body: Consumer<AppState>(builder: (context, state, child) {
-        return Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(
-                height: 175,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 92),
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 174,
-                  width: 174,
-                  decoration: const BoxDecoration(color: AppColors.containerBg),
+        return SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(
+                  height: 175,
                 ),
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              InputWidget(
-                hintText: "Email",
-                prefixIcon: const Icon(Icons.mail),
-                cont: emailcont,
-                isObscure: false,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              InputWidget(
-                hintText: "Password",
-                prefixIcon: const Icon(Icons.lock),
-                suffixIcon: Icons.remove_red_eye,
-                cont: passcont,
-                isObscure: true,
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              CustomButton(
-                textStyle: TextStylesConsts.loginText,
-                bgColor: AppColors.borderColor,
-                text: "Login",
-                borderColor: AppColors.buttonBorderColor,
-                auth: () {
-                  if (emailcont.text.isNotEmpty && passcont.text.isNotEmpty) {
-                    state.signIn(
-                        email: emailcont, password: passcont, ctx: context);
-                  } else {
-                    snackBar("Bütün alanları doldurunuz");
-                  }
-                },
-                icon: Icons.login_rounded,
-                iconColor: AppColors.buttonWhiteBg,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomButton(
-                textStyle: TextStylesConsts.passwordText,
-                bgColor: AppColors.buttonWhiteBg,
-                borderColor: AppColors.borderColor,
-                text: "Register",
-                auth: () {
-                  Navigator.of(context)
-                      .pushReplacementNamed(RegisterScreen.routeName);
-                },
-                icon: Icons.login_rounded,
-                iconColor: AppColors.borderColor,
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 92),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 174,
+                    width: 174,
+                    decoration:
+                        const BoxDecoration(color: AppColors.containerBg),
+                  ),
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                InputWidget(
+                  hintText: "Email",
+                  prefixIcon: const Icon(Icons.mail),
+                  cont: emailcont,
+                  isObscure: false,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                InputWidget(
+                  hintText: "Password",
+                  prefixIcon: const Icon(Icons.lock),
+                  suffixIcon: Icons.remove_red_eye,
+                  cont: passcont,
+                  isObscure: true,
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                CustomButton(
+                  textStyle: TextStylesConsts.loginText,
+                  bgColor: AppColors.borderColor,
+                  text: "Login",
+                  borderColor: AppColors.buttonBorderColor,
+                  auth: () {
+                    if (emailcont.text.isNotEmpty && passcont.text.isNotEmpty) {
+                      state.signIn(
+                          email: emailcont, password: passcont, ctx: context);
+                    } else {
+                      snackBar("Bütün alanları doldurunuz");
+                    }
+                  },
+                  icon: Icons.login_rounded,
+                  iconColor: AppColors.buttonWhiteBg,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                CustomButton(
+                  textStyle: TextStylesConsts.passwordText,
+                  bgColor: AppColors.buttonWhiteBg,
+                  borderColor: AppColors.borderColor,
+                  text: "Register",
+                  auth: () {
+                    Navigator.of(context)
+                        .pushReplacementNamed(RegisterScreen.routeName);
+                  },
+                  icon: Icons.login_rounded,
+                  iconColor: AppColors.borderColor,
+                )
+              ],
+            ),
           ),
         );
       }),

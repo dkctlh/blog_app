@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:blog_app/Provider/providerstate.dart';
@@ -11,7 +10,7 @@ import 'package:provider/provider.dart';
 import '../Constants/colors_constants.dart';
 
 class ModalView extends StatefulWidget {
-  ModalView({Key? key}) : super(key: key);
+  const ModalView({Key? key}) : super(key: key);
 
   @override
   State<ModalView> createState() => _ModalViewState();

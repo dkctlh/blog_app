@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:blog_app/Utils/snackbar_widget.dart';
 import 'package:blog_app/models/blogs_model.dart';
 import 'package:blog_app/services/IAppService.dart';
 import 'package:flutter/cupertino.dart';
@@ -91,7 +90,7 @@ class AppState with ChangeNotifier {
         notifyListeners();
       }
     } else {
-      ///TODO: Show error snackbar.
+      snackBar("Bir hata oluştu.");
     }
   }
 

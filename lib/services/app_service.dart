@@ -86,6 +86,7 @@ class AppService extends IAppService {
     } else {
       snackBar("Bir hata oluştu.");
     }
+    return null;
   }
 
   @override

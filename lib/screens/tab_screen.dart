@@ -26,7 +26,7 @@ class _TabScreenState extends State<TabScreen> {
   void initState() {
     _pages = [
       {
-        'page': FavoritesScreen(),
+        'page': const FavoritesScreen(),
         'title': 'My Favorites',
       },
       {
@@ -34,7 +34,7 @@ class _TabScreenState extends State<TabScreen> {
         'title': 'Home',
       },
       {
-        'page': ProfileScreen(),
+        'page': const ProfileScreen(),
         'title': 'My Profile',
       }
     ];

@@ -4,14 +4,13 @@ import 'package:blog_app/widgets/avatar_widget.dart';
 import 'package:blog_app/widgets/map_widget.dart';
 import 'package:blog_app/widgets/modal_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 import '../Constants/colors_constants.dart';
 import '../constants/textstyle_constants.dart';
 
 class ProfileScreen extends StatelessWidget {
-  ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Consumer<AppState>(builder: (context, state, child) {
@@ -28,7 +27,8 @@ class ProfileScreen extends StatelessWidget {
                   AvatarView(
                     impicker: () {
                       showBottomSheet(
-                          context: context, builder: (context) => ModalView());
+                          context: context,
+                          builder: (context) => const ModalView());
                     },
                   ),
                   const SizedBox(

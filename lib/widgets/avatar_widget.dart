@@ -1,7 +1,5 @@
 import 'package:blog_app/Provider/providerstate.dart';
 import 'package:blog_app/constants/colors_constants.dart';
-import 'package:blog_app/constants/textstyle_constants.dart';
-import 'package:blog_app/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'dart:io';
@@ -33,7 +31,7 @@ class AvatarView extends StatelessWidget {
                   left: 103,
                   top: 119,
                   child: IconButton(
-                    icon: Icon(Icons.camera_alt_rounded),
+                    icon: const Icon(Icons.camera_alt_rounded),
                     color: AppColors.borderColor,
                     iconSize: 32,
                     onPressed: impicker,
@@ -46,7 +44,7 @@ class AvatarView extends StatelessWidget {
             top: 163,
             right: 137,
             child: IconButton(
-              icon: Icon(Icons.camera_alt_rounded),
+              icon: const Icon(Icons.camera_alt_rounded),
               color: AppColors.buttonWhiteBg,
               iconSize: 28,
               onPressed: () {},

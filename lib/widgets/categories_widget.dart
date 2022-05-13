@@ -17,7 +17,7 @@ class CategoryView extends StatelessWidget {
         Container(
           height: 91,
           width: 164,
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.network(

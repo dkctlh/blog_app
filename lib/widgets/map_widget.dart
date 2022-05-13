@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:blog_app/Provider/providerstate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';

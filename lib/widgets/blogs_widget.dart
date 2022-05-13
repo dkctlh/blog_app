@@ -1,6 +1,5 @@
 import 'package:blog_app/constants/colors_constants.dart';
 import 'package:blog_app/models/blogs_model.dart';
-import 'package:blog_app/screens/article_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/shims/dart_ui_fake.dart';
 
