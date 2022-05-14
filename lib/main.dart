@@ -1,6 +1,7 @@
 import 'package:blog_app/Provider/providerstate.dart';
 import 'package:blog_app/constants/colors_constants.dart';
 import 'package:blog_app/context/global_context.dart';
+
 import 'package:blog_app/screens/logIn_screen.dart';
 import 'package:blog_app/screens/register_screen.dart';
 import 'package:blog_app/screens/tab_screen.dart';
